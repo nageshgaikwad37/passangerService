@@ -1,0 +1,8 @@
+<app-passcount [checked]="checkIncount" [totlepass]="totlepass.length"></app-passcount>
+<h4 *ngFor="let passObj of totlepass">
+    {{passObj.fullname}}
+</h4>
+<app-pass-details *ngFor="let passObj of totlepass" [passObj]="passObj">
+   <button class="btn btn-outline-danger ml-2" (click)="onRemove(passObj.id)">Remove</button>
+</app-pass-details>
+
